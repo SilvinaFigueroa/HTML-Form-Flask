@@ -2,28 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Your Fortune Teller</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    <div class="form-box">
+        <h2>Do you want to know your fortune?</h2>
 
-<form action = "http://localhost:5000/Fortune" method = "post">
-
-<!--<form method="POST" action="/fortune">-->
-    <input type="text" name="user">
-    <select name="color">
-        <option>red</option>
-        <option>yellow</option>
-        <option>blue</option>
-        <option>green</option>
-    </select>
-    <select name="number">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-    </select>
-    <button>submit</button>
-
-</form>
+        <form action = "http://localhost:5000/Fortune" method = "post">
+        <!--<form method="POST" action="/fortune">-->
+            <div class="user-box">
+                <label>Your Name:</label>
+                <input type="text" name="user" required="">
+                <span></span>
+                <div>
+                    <label for="color">Pick a Color:</label>
+                    <select name="color" id="color">
+                        <option value="red">Red</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                    </select>
+                    <span></span>
+                </div>
+                <div>
+                    <label for="number">Select a Number:</label>
+                    <select name="number" id="number">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <span></span>
+                </div>
+            </div>
+            <span></span>
+            <div class="container">
+                <div>
+                    <button class="submit">Get your Fortune!</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

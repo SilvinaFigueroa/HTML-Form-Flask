@@ -1,6 +1,6 @@
 # Importing flask module in the project is mandatory
 # An object of Flask class is our WSGI application.
-from flask import Flask, redirect, url_for, request
+from flask import Flask, redirect, url_for, request, render_template
 
 import fortune_results
 
@@ -54,7 +54,7 @@ def fortune():
 def user_fortune(user, color, number):
     # return 'Your Fortune: {} {} {}'.format(user, color, number)
     response = fortune_results.results(user, color, number)
-    return response
+    return render_template('YourFortune.html', fortune=response, )
 
 
 # main driver function
